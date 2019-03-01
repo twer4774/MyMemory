@@ -13,7 +13,7 @@
         <!--목록-->
         <scene sceneID="zIP-ly-zS4">
             <objects>
-                <tableViewController id="hl2-kc-YlM" sceneMemberID="viewController">
+                <tableViewController id="hl2-kc-YlM" customClass="MemoListTableViewController" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Muz-AE-2kj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="80" id="30u-hY-FVG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="80" id="30u-hY-FVG" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="30u-hY-FVG" id="NU1-TJ-oq3">
@@ -74,7 +74,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="1CF-Ub-hHf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="1CF-Ub-hHf" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="108" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1CF-Ub-hHf" id="IeD-Vo-pGo">
@@ -155,7 +155,7 @@
         <!--메모 작성-->
         <scene sceneID="KJN-K6-BlB">
             <objects>
-                <viewController id="zrF-Qb-3Go" sceneMemberID="viewController">
+                <viewController id="zrF-Qb-3Go" customClass="MemoFromViewController" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZTU-z0-qcX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,10 +189,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="메모 작성" id="3vH-A2-K2E">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="PUV-X6-mAm"/>
-                            <barButtonItem title="저장" id="U9a-6G-WUn"/>
+                            <barButtonItem systemItem="camera" id="PUV-X6-mAm">
+                                <connections>
+                                    <action selector="btnPick:" destination="zrF-Qb-3Go" id="W4H-M3-qfe"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="저장" id="U9a-6G-WUn">
+                                <connections>
+                                    <action selector="btnSave:" destination="zrF-Qb-3Go" id="50A-6R-xU0"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="jk6-U7-IxB" id="a0F-fr-mns"/>
+                        <outlet property="txtContents" destination="f68-od-KcA" id="8XP-rm-phv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oT-IR-ggm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
