@@ -26,7 +26,31 @@ class MemoFromViewController: UIViewController {
     
     
     @IBAction func btnSave(_ sender: Any) {
+        //내용을 입력하지 않았을 경우, 경고표시
+        guard self.txtContents.text.isEmpty == false else {
+            let alert  = UIAlertController(title: nil, message: "내용을 입력하세요", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+                
+            return
+        }
+
         
+        //MemoData 객체를 생성하고, 데이터를 담음
+        let data = MemoData()
+        
+        data.title = self.subject //제목
+        data.contents = self.txtContents.text
+        data.image = self.imgView.image
+        data.regdate = Date() //현재 시간
+        
+        //앱 델리게이트 객체를 읽어온 후, memolist 배열에 MemData 객체 추가
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memolist.append(data)
+        
+        //작성폼 화면을 종료하고, 이전 화면으로 되돌아간다.
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func btnPick(_ sender: Any) {
