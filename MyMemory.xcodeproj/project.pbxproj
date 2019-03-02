@@ -16,6 +16,7 @@
 		472A8FE7222963A1001F72EE /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A8FE6222963A1001F72EE /* MemoCell.swift */; };
 		472A8FE9222965B3001F72EE /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A8FE8222965B3001F72EE /* MemoData.swift */; };
 		472A8FEB2229681A001F72EE /* MemoFromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A8FEA2229681A001F72EE /* MemoFromViewController.swift */; };
+		472A8FED222A5B15001F72EE /* MemoReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A8FEC222A5B15001F72EE /* MemoReadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		472A8FE6222963A1001F72EE /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		472A8FE8222965B3001F72EE /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
 		472A8FEA2229681A001F72EE /* MemoFromViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFromViewController.swift; sourceTree = "<group>"; };
+		472A8FEC222A5B15001F72EE /* MemoReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				4722D4892222D90400574159 /* Info.plist */,
 				4722D4812222D90000574159 /* MyMemory.xcdatamodeld */,
 				472A8FE422296361001F72EE /* MemoListTableViewController.swift */,
+				472A8FEC222A5B15001F72EE /* MemoReadViewController.swift */,
 				472A8FEA2229681A001F72EE /* MemoFromViewController.swift */,
 				472A8FE6222963A1001F72EE /* MemoCell.swift */,
 				472A8FE8222965B3001F72EE /* MemoData.swift */,
@@ -151,6 +154,7 @@
 				4722D4832222D90000574159 /* MyMemory.xcdatamodeld in Sources */,
 				472A8FE9222965B3001F72EE /* MemoData.swift in Sources */,
 				4722D47B2222D90000574159 /* AppDelegate.swift in Sources */,
+				472A8FED222A5B15001F72EE /* MemoReadViewController.swift in Sources */,
 				472A8FE522296361001F72EE /* MemoListTableViewController.swift in Sources */,
 				472A8FE7222963A1001F72EE /* MemoCell.swift in Sources */,
 			);

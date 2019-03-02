@@ -13,7 +13,7 @@
         <!--목록-->
         <scene sceneID="zIP-ly-zS4">
             <objects>
-                <tableViewController id="hl2-kc-YlM" customClass="MemoListTableViewController" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MemoListTableViewController" id="hl2-kc-YlM" customClass="MemoListTableViewController" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Muz-AE-2kj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qky-L5-JSA">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qky-L5-JSA">
                                             <rect key="frame" x="0.0" y="0.0" width="81.5" height="79.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="qky-L5-JSA" secondAttribute="height" multiplier="81:79" id="4va-fL-I2I"/>
@@ -166,7 +166,7 @@
         <!--메모 작성-->
         <scene sceneID="KJN-K6-BlB">
             <objects>
-                <viewController id="zrF-Qb-3Go" customClass="MemoFromViewController" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoFromViewController" id="zrF-Qb-3Go" customClass="MemoFromViewController" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZTU-z0-qcX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,10 +221,10 @@
             </objects>
             <point key="canvasLocation" x="1964" y="-376"/>
         </scene>
-        <!--Title-->
+        <!--메모읽기-->
         <scene sceneID="nGZ-rx-zEk">
             <objects>
-                <viewController id="uZw-bE-tqy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoReadViewController" id="uZw-bE-tqy" customClass="MemoReadViewController" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XgO-dE-Yz9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,7 +272,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lpd-d3-LnS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="c8x-aX-owi"/>
+                    <navigationItem key="navigationItem" title="메모읽기" id="c8x-aX-owi"/>
+                    <connections>
+                        <outlet property="img" destination="XbM-bK-quO" id="dyu-x6-Xvi"/>
+                        <outlet property="lbContents" destination="Boe-Mt-dZD" id="GHD-HS-CfE"/>
+                        <outlet property="lbSubject" destination="prB-Hg-Sab" id="V7P-Tz-icv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yC3-7M-erJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
